@@ -1,6 +1,9 @@
-public class ShortWordFilter {
-    public static void main(String[] args)
+public class ShortWordFilter implements Filter
+{
+    @Override
+    public boolean accept(Object x)
     {
-
+        String val = (String) x;
+        return (val.length() > 5);
     }
 }
